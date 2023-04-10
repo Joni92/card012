@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    /* font-family: 'Lato', sans-serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(#2b1055, #7597de);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 300px;
+    background: rgb(21, 20, 21);
+    /* background: rgba(21, 20, 21, 0.2); */
+    border-radius: 15px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px #000;
+    padding: 1.5rem 2em;
+    box-shadow: 0 10px 50px -10px #000;
+    animation: cardAnimation 2s alternate infinite;
+}
+
+/* @keyframes cardAnimation {
+    from { transform: translateY(-20px)}
+} */
+
+.card::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -6.6rem;
+    width: 600px;
+    height: 800px;    
+    clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+    box-shadow: 0 600px 50px rgba(95, 189, 110, 1) inset;
+}
+
+.card-top .card-logo {
+    display: flex;
+    justify-content: end;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-center .chip {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.card-center .signal {
+    transform: rotate(90deg);
+    width: 50px;
+    height: 50px;
+}
+
+.card-logo img {
+    width: 80px;
+    z-index: 1;
+}
+
+.card-center {
+    z-index: 1;
+}
+
+.card-center svg {
+    width: 60px;
+}
+
+.card-bottom-right, .card-bottom-left {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Exo', sans-serif;
+    z-index: 1;
+}
+
+.card-bottom-left .owner {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.card-number {
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+}
+
+.exp-date span{
+    font-size: .5rem;
+}
+
+.card-bottom-right img {
+    transform: rotate(90deg);
+    width: 80px;
+    margin-right: -16px;
+}
